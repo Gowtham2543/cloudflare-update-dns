@@ -1,0 +1,14 @@
+[Unit]
+Description=Update Cloudflare DNS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/gowtham/cloudflare-update-dns
+ExecStart=/bin/bash ./cloudflare-update-dns.bash
+
+[Install]
+WantedBy=multi-user.target
+
+
