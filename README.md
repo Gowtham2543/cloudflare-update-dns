@@ -15,7 +15,7 @@ When you have your cloudflare domain pointed to a server that has a dynamic IP, 
 - Clone this repository.
 - Copy the contents of the `.env.example` file to a new `.env` file.
 - Edit the `.env` file with your actual values.
-- Replace the `WorkingDirectory` in `cloudflare-update-dns.service` with the location of this repository in your system.
+- Set the `WorkingDirectory` in `cloudflare-update-dns.service` to the path where this repository is located on your system.
 - Run the following command to start the timer
   ```
   sudo systemctl enable cloudflare-update-dns.timer
